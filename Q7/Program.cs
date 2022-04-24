@@ -6,50 +6,30 @@ namespace Q7
 	{
 		static void Main(string[] args)
 		{
-			D d = new D();
-			E e = new E();
 
-			d.Display();
-			((A)e).Display();
-			((B)d).Display();
-			((A)d).Display();
 		}
 	}
-	class A
+	class IndexingClass
 	{
-		public virtual void Display()
+		private int[] array;
+
+		public IndexingClass(int[] array)
 		{
-			Console.WriteLine("A");
+			this.array = array;
 		}
-	}
-	class B : A
-	{
-		public new void Display()
-		{
-			Console.WriteLine("B");
+
+        public int this[int index]
+        {
+			get
+			{
+				return array[index];
+			}
+
+			set
+			{
+				array[index] = value;
+			}
 		}
-	}
-	class C : A
-	{
-		public override void Display()
-		{
-			Console.WriteLine("C");
-		}
-	}
-	class D : B
-	{
-		public new void Display()
-		{
-			Console.WriteLine("D");
-		}
-	}
-	class E : C
-	{
-		public new void Display()
-		{
-			Console.WriteLine("E");
-		}
-	}
-	
+    }
 }
 
