@@ -9,22 +9,40 @@ namespace Q7
             Console.WriteLine("Hello World!");
         }
     }
-    class Employee
+   class food
     {
-        public string Name;
-        public int Age;
-        public int Salary;
+
     }
-    class ProjectManager:Employee
+    class fruit : food
     {
-        public string ProjectName;
+
+    }
+    class vegetable : food
+    {
+
+    }
+    class Apple : fruit 
+    { 
 
     }
 
+    class Banana : fruit 
+    { 
     
-        class Developer : Employee
-    {
-        public string ProgrammingLanguage;
+    }
 
+    class Pear : fruit 
+    { 
+
+    }
+
+    class Potato : vegetable 
+    { 
+
+    }
+
+    class Carrot : vegetable 
+    { 
+    
     }
 }
