@@ -2,47 +2,27 @@
 
 namespace Q7
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
-    }
-   class food
-    {
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			Console.WriteLine("Hello World!");
+		}
+	}
+	class Obj
+	{
+		private string name;
+		private string owner;
+		private int length;
+		private int count;
 
-    }
-    class fruit : food
-    {
-
-    }
-    class vegetable : food
-    {
-
-    }
-    class Apple : fruit 
-    { 
-
-    }
-
-    class Banana : fruit 
-    { 
-    
-    }
-
-    class Pear : fruit 
-    { 
-
-    }
-
-    class Potato : vegetable 
-    { 
-
-    }
-
-    class Carrot : vegetable 
-    { 
-    
-    }
+		public Obj(string name, string ownerName, int objLength, int count)
+		{
+			this.name = name;
+			owner = ownerName;
+			length = objLength;
+			this.count = count;
+		}
+	}
 }
+
