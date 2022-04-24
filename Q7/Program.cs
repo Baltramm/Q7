@@ -11,29 +11,22 @@ namespace Q7
 	}
 	class BaseClass
 	{
-		protected string Name;
-
-		public BaseClass(string name)
+		public virtual int Counter
 		{
-			Name = name;
+			get;
+			set;
 		}
 	}
 
 	class DerivedClass : BaseClass
 	{
-		public string Description;
-
-		public int Counter;
-		public DerivedClass(string name, string description) : base(name)
+		private int counter;
+		public override int Counter 
 		{
-			Description = description;
+			get { return counter; }
+			set { if (value < 0) { counter = value; } }
+		    
 		}
-
-		public DerivedClass(string name, string description, int counter) : base(name)
-		{
-			Description = description;
-			Counter = counter;
-		}
-	}
+    }
 }
 
