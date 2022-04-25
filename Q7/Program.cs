@@ -6,44 +6,42 @@ namespace Q7
 	{
 		static void Main(string[] args)
 		{
-			int num1 = 7;
-			int num2 = -13;
-			int num3 = 0;
-
-			Console.WriteLine(num1.GetNegative()); //-7
-			Console.WriteLine(num1.GetPositive()); //7
-			Console.WriteLine(num2.GetNegative()); //-13
-			Console.WriteLine(num2.GetPositive()); //13
-			Console.WriteLine(num3.GetNegative()); //0
-			Console.WriteLine(num3.GetPositive()); //0
+			
 		}
 	}
-	static class Int 
+
+	class Car<TEngine> where TEngine : Engine
 	{
-		public static int GetNegative(this int num)
+		public TEngine Engine;
+
+		public virtual void ChangePart<TPart>(TPart newPart ) where TPart : CarPart
 		{
-			if (num > 0)
-			{
-				return -num;
-			}
-			else
-			{
-				return num;
-			}
-		}
-		public static int GetPositive(this int num)
-		{
-			if (num < 0)
-			{
-				return -num;
-			}
-			else
-			{
-				return num;
-			}
-		}
+
+        }
+}
 	}
 
+    class ElectricEngine : Engine
+    {
+
+    }
+
+	class GasEngine : Engine
+{
+
+    }
+	class Battery : CarPart
+{
+
+    }
+    class Differential : CarPart
+{
+
+    }
+	class Wheel : CarPart
+{
+
+    }
 
 }
 
